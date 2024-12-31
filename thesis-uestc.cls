@@ -46,7 +46,8 @@
 
 \RequirePackage{xeCJK}
 \RequirePackage{ifplatform}
-
+\usepackage{fontspec}
+\defaultfontfeatures{Path=/root/.fonts/}  % 设置默认字体搜索路径
 \ifwindows
   \setCJKmainfont[AutoFakeBold=true]{SimSun}
   \newCJKfontfamily{\heiti}{SimHei}
@@ -63,6 +64,7 @@
   \newCJKfontfamily{\heiti}{fzhei.ttf}
   \newfontfamily{\heiti@letter}{fzhei.ttf}
   \setallmainfonts[
+    % Path=/root/.fonts/,
     BoldFont=timesbd.ttf,
     ItalicFont=timesi.ttf,
     BoldItalicFont=timesbi.ttf,
